@@ -1,115 +1,133 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-findcond navbar-fixed-top">
-        <div className="container">
-          <div className="navbar-header">
-            <button
-              type="button"
-              className="navbar-toggle collapsed"
+      <div className="navbar">
+        <div className="navbar-inner">
+          <div className="container">
+            <a
+              className="btn btn-navbar"
               data-toggle="collapse"
-              data-target="#navbar"
+              data-target=".nav-collapse"
             >
-              <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar" />
               <span className="icon-bar" />
               <span className="icon-bar" />
-            </button>
-            <a className="navbar-brand" href="#">
-              Findcond
             </a>
-          </div>
-          <div className="collapse navbar-collapse" id="navbar">
-            <ul className="nav navbar-nav navbar-right">
-              <li className="dropdown">
-                <a
-                  href="#"
-                  className="dropdown-toggle"
-                  data-toggle="dropdown"
-                  role="button"
-                  aria-expanded="false"
-                >
-                  <i className="fa fa-fw fa-bell-o" /> Bildirimler{' '}
-                  <span className="badge">0</span>
-                </a>
-                <ul className="dropdown-menu" role="menu">
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-fw fa-tag" />{' '}
-                      <span className="badge">Music</span> sayfası{' '}
-                      <span className="badge">Video</span> sayfasında
-                      etiketlendi
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-fw fa-thumbs-o-up" />{' '}
-                      <span className="badge">Music</span> sayfasında iletiniz
-                      beğenildi
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-fw fa-thumbs-o-up" />{' '}
-                      <span className="badge">Video</span> sayfasında iletiniz
-                      beğenildi
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-fw fa-thumbs-o-up" />{' '}
-                      <span className="badge">Game</span> sayfasında iletiniz
-                      beğenildi
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="active">
-                <a href="#">
-                  Ana Sayfa <span className="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="dropdown">
-                <a
-                  href="#"
-                  className="dropdown-toggle"
-                  data-toggle="dropdown"
-                  role="button"
-                  aria-expanded="false"
-                >
-                  Admin <span className="caret" />
-                </a>
-                <ul className="dropdown-menu" role="menu">
-                  <li>
-                    <a href="#">Geri bildirim</a>
-                  </li>
-                  <li>
-                    <a href="#">Yardım</a>
-                  </li>
-                  <li className="divider" />
-                  <li>
-                    <a href="#">Ayarlar</a>
-                  </li>
-                  <li>
-                    <a href="#exit">Çıkış yap</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <form
-              className="navbar-form navbar-right search-form"
-              role="search"
-            >
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search"
-              />
-            </form>
+            <a className="brand" href="#">
+              Job Site(Monster)
+            </a>
+            {/* Job
+Recruiters
+Companies
+Tools
+Services
+More
+Login
+For Employees */}
+            <div className="nav-collapse">
+              <ul className="nav">
+                <li className="active">
+                  <a href="#">Jobs</a>
+                </li>
+                <li className="dropdown">
+                  <a
+                    href="#"
+                    className="dropdown-toggle"
+                    data-toggle="dropdown"
+                  >
+                    Recruiters <b className="caret" />
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a href="#">Action</a>
+                    </li>
+                    <li>
+                      <a href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li className="divider" />
+                    <li className="nav-header">Nav header</li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+                <li className="dropdown">
+                  <a
+                    href="#"
+                    className="dropdown-toggle"
+                    data-toggle="dropdown"
+                  >
+                    Companies <b className="caret" />
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a href="#">Action</a>
+                    </li>
+                    <li>
+                      <a href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li className="divider" />
+                    <li className="nav-header">Nav header</li>
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                    <li>
+                      <a href="#">One more separated link</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul className="nav pull-right">
+                <li className="divider-vertical" />
+                <li className="nav-header">
+                  <Link to="./login">Login</Link>
+                </li>
+                <li className="nav-header">
+                  <Link to="./register">Register</Link>
+                </li>
+                <li className="nav-header">
+                  <Link to="./login">For Employer</Link>
+                </li>
+                <li className="dropdown">
+                  <a
+                    href="#"
+                    className="dropdown-toggle"
+                    data-toggle="dropdown"
+                  >
+                    Tools <b className="caret" />
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a href="#">Action</a>
+                    </li>
+                    <li>
+                      <a href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a href="#">Something else here</a>
+                    </li>
+                    <li className="divider" />
+                    <li>
+                      <a href="#">Separated link</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
   );
 }
